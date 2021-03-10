@@ -1,2 +1,11 @@
-// @generated: @expo/next-adapter@2.1.9
-export { default } from '@expo/next-adapter/document'
+import Document, { DocumentContext } from 'next/document'
+
+class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx)
+
+    return initialProps
+  }
+}
+
+export default MyDocument
