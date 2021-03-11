@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from 'react';
-import { Button, Platform, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {  View, StyleSheet, Text } from 'react-native';
 
 type PropType = {
     children: React.ReactNode
@@ -10,10 +10,10 @@ type PropType = {
 
 export default  function Layout ({title, children}: PropType): JSX.Element{
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
             <Text>{title}</Text>
       {children}
-       </SafeAreaView>
+       </View>
     )
 }
 

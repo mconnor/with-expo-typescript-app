@@ -1,6 +1,12 @@
-# With Expo TypeScript - all packages latst
+# With Expo TypeScript - all packages upgraded to latest
 
 This is running the latest of every package including React 17
+
+In React 17, 
+
+```import React from 'react'```
+
+ must be added to every jsx page.  Next has a script to do that. 
 
 [![supports iOS](https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff)](https://itunes.apple.com/app/apple-store/id982107779)
 [![supports Android](https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff)](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www)
