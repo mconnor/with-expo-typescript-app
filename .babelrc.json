@@ -1,0 +1,3 @@
+{
+    "presets": ["@expo/next-adapter/babel", "babel-preset-expo"]
+  }

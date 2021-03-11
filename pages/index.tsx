@@ -1,22 +1,28 @@
-// @generated: @expo/next-adapter@2.1.9
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+/* eslint-disable no-debugger */
+import React, { useState } from "react";
+import Link from "next/link";
+import Layout from "components/Layout";
+import Button from "components/Button";
 
-export default function App() {
+export default function IndexPage(): JSX.Element {
+  //const [time, setTiem] = useState(new Date());
+  const [copy, setCopy] = useState("click me");
+
+  const handleClick = () => {
+    debugger;
+console.log('clicked')
+    setCopy(`clicked at ${Math.floor(Math.random()*100)}`);
+  };
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Welcome to Expo + Next.js 👋</Text>
-    </View>
-  )
+    <Layout title="Home | Next.js + TypeScript Example">
+      <h1>Hello Next.js 👋</h1>
+      <p>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </p>
+      <Button clickHandler={handleClick} copy={copy}></Button>
+    </Layout>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 16,
-  },
-})

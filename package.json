@@ -4,6 +4,8 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "dev": "next",
+    "debug": "NODE_OPTIONS='--inspect' next dev",
+    "lint": "eslint -c .eslintrc --ext .tsx --ext .ts ./",
     "build": "next build",
     "start": "expo start",
     "android": "expo start --android",
@@ -12,10 +14,14 @@
     "eject-next": "next-expo customize",
     "eject": "expo eject",
     "type-check": "tsc"
+  
   },
   "dependencies": {
     "expo": "~40.0.1",
     "next": "latest",
+    "next-fonts": "^1.5.1",
+    "next-images": "^1.7.0",
+    "next-transpile-modules": "^6.3.0",
     "react": "~17.0.1",
     "react-dom": "~17.0.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
@@ -23,12 +29,18 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
+    "@babel/eslint-parser": "^7.13.10",
+    "@babel/eslint-plugin": "^7.13.10",
     "@expo/next-adapter": "2.1.62",
     "@types/node": "14.14.33",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.2",
     "@types/react-native": "0.63.51",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
     "babel-preset-expo": "~8.3.0",
+    "eslint": "^7.21.0",
+    "eslint-plugin-react": "^7.22.0",
     "typescript": "4.2.3"
   },
   "license": "MIT"
